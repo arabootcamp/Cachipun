@@ -24,9 +24,9 @@
  let map = ["", "Piedra", "Papel", "Tijera"];
 
  if (!isNaN(numGames) && Number.isInteger(numGames))
-   for (i = 0; i < numGames; i++) {
+   for (let i = 0; i < numGames; i++) {
      let userSelection = parseInt(prompt(`Ingrese: \n1 es Piedra \n2 es Papel \n3 es Tijera`));
-     if (!isNaN(userSelection) && Number.isInteger(userSelection)){
+     if (!isNaN(userSelection) && Number.isInteger(userSelection) && userSelection > 0 && userSelection < 4) {
        [gameResult, computerSelection] = Cachipun(userSelection);
 
        switch (gameResult) {
@@ -49,11 +49,10 @@
            alert("Esto no deberia ocurrir");
            break;
        }
+     } else {
+       alert(`Debe ingresar un dígito que sea 1, 2 o 3.`);
+       numGames = NaN;
      }
-     else{
-     alert(`Debe ingresar un dígito que sea 1, 2 o 3.`);
-     numGames=NaN; 
-    }
    } else
      alert(`Debe ingresar solo número enteros positivos.`);
 
