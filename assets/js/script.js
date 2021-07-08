@@ -32,18 +32,18 @@
        switch (gameResult) {
 
          case -1:
-           alert(`\ntu:${map[userSelection]} V/S Computadora:${map[computerSelection]}\n\nPERDISTE\n\nPartidas: ${i+1} de ${numGames}\nGanados: ${winUser}\nEmpatados: ${tie}\nPerdidos: ${i+1 - winUser - tie}`);
+           alert(`\ntu:${map[userSelection]} V/S Computadora:${map[computerSelection]}\n\nPERDISTE contra la Computadora\n\nPartidas: ${i+1} de ${numGames}\nGanados: ${winUser}\nEmpatados: ${tie}\nPerdidos: ${i+1 - winUser - tie}`);
            break;
 
          case 0:
            tie++;
-           alert(`\ntu:${map[userSelection]} V/S Computadora:${map[computerSelection]}\n\nEMPATASTE\n\nPartidas: ${i+1} de ${numGames}\nGanados: ${winUser}\nEmpatados: ${tie}\nPerdidos: ${i+1 - winUser - tie}`);
+           alert(`\ntu:${map[userSelection]} V/S Computadora:${map[computerSelection]}\n\nEMPATASTE con la Computadora\n\nPartidas: ${i+1} de ${numGames}\nGanados: ${winUser}\nEmpatados: ${tie}\nPerdidos: ${i+1 - winUser - tie}`);
            break;
            break;
 
          case 1:
            winUser++;
-           alert(`\ntu:${map[userSelection]} V/S Computadora:${map[computerSelection]}\n\nGANASTE\n\nPartidas: ${i+1} de ${numGames}\nGanados: ${winUser}\nEmpatados: ${tie}\nPerdidos: ${i+1 - winUser - tie}`);
+           alert(`\ntu:${map[userSelection]} V/S Computadora:${map[computerSelection]}\n\nGANASTE a la Computadora, Felicitaciones!!!\n\nPartidas: ${i+1} de ${numGames}\nGanados: ${winUser}\nEmpatados: ${tie}\nPerdidos: ${i+1 - winUser - tie}`);
            break;
          default:
            alert("Esto no deberia ocurrir");
