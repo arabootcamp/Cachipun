@@ -1,6 +1,6 @@
  let button = document.getElementById('play');
 
- button.onclick = function() {
+ button.addEventListener('click', function () {
 
    /*Función que retorna quien gana y la selección de la computadora*/
    function Cachipun(userSelection) {
@@ -20,12 +20,12 @@
    }
 
    /*Main*/
-   let numGames = parseInt(prompt("Ingrese la cantidad de partidas a jugar"));
+   let numGames = parseInt(prompt('Ingrese la cantidad de partidas a jugar'));
    let winUser = 0,
      tie = 0,
      userSelection = 0,
      gameResult, computerSelection;
-   let map = ["", "Piedra", "Papel", "Tijera"];
+   let map = ['', 'Piedra', 'Papel', 'Tijera'];
 
    if (!isNaN(numGames) && Number.isInteger(numGames))
      for (let i = 0; i < numGames; i++) {
@@ -50,7 +50,7 @@
              alert(`\ntu:${map[userSelection]} V/S Computadora:${map[computerSelection]}\n\nGANASTE a la Computadora, Felicitaciones!!!\n\nPartidas: ${i+1} de ${numGames}\nGanados: ${winUser}\nEmpatados: ${tie}\nPerdidos: ${i+1 - winUser - tie}`);
              break;
            default:
-             alert("Esto no deberia ocurrir");
+             alert('Esto no deberia ocurrir');
              break;
          }
        } else {
@@ -62,4 +62,4 @@
 
    alert(`**RESULTADO FINAL** \n\nPartidas: ${numGames} \nGanaste: ${winUser}\nEmpataste: ${tie}\nPerdiste: ${numGames - winUser - tie}`);
 
- }
+ });
